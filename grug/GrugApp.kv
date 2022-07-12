@@ -1,0 +1,155 @@
+#:kivy 2.0.0
+
+<MenuScreen>:
+    BoxLayout:
+        LoginButton:
+            text: "Login"
+            on_press: root.manager.current = 'user'
+        
+        SignupButton: 
+            text: "Signup"
+            on_press: root.manager.current = 'signup'
+    
+
+<LoginScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        AnchorLayout:
+            anchor_x: "center"
+            anchor_y: "top"
+            Label:
+                text: "login"
+        AnchorLayout:
+            anchor_x: "center"
+            anchor_y: "center"
+            BoxLayout:
+                orientation: "vertical"
+                size_hint: .5, .3
+                TextInput:
+                    text: root.temp_pass
+                TextInput:
+                    text: root.temp_user
+
+<SignupScreen>:
+    AnchorLayout:
+        anchor_y: "top"
+        anchor_x: "left"
+        TextInput:
+            text: "username"
+            size_hint: .4, .1
+
+    AnchorLayout:
+        anchor_y: "top"
+        anchor_x: "right"
+        TextInput:
+            text: "password"
+            size_hint: .4, .1
+    
+    AnchorLayout:
+        anchor_y: "bottom"
+        anchor_x: "left"
+        TextInput:
+            text: "code"
+            size_hint: .4, .1
+
+    AnchorLayout:
+        anchor_y: "bottom"
+        anchor_x: "right"
+        TextInput:
+            text: "email"
+            size_hint: .4, .1
+    
+    AnchorLayout:
+        anchor_y: "center"
+        anchor_x: "center"
+        Label:
+            text: "From each according to his ability, to each according to his needs"
+            size_hint: .3, .3
+    
+<UserScreen>
+    BoxLayout:
+        BoxLayout:
+            size_hint: .2, 1
+            orientation: "vertical"
+            BoxLayout:
+                size_hint: 1, .2
+                Label:
+                    text: "AVATAR"
+                    size_hint: .2, .5
+                Label:
+                    text: "User"
+                    size_hint: .2, .5
+            
+            ScrollView:
+                StackLayout:
+                    height: self.minimum_height
+                    Button: 
+                        text: "thing"
+                        size_hint: None, None
+                        height: "100dp"
+                    Button: 
+                        text: "thing"
+                        size_hint: None, None
+                        height: "100dp"
+                    Button: 
+                        text: "thing"
+                        size_hint: None, None
+                        height: "100dp"
+                    Button: 
+                        text: "thing"
+                        size_hint: None, None
+                        height: "100dp"
+                    Button: 
+                        text: "thing"
+                        size_hint: None, None
+                        height: "100dp"
+                    Button: 
+                        text: "thing"
+                        size_hint: None, None
+                        height: "100dp"
+        
+        ScrollView:
+            size_hint: .6, 1
+            BoxLayout:
+                orientation: "vertical"
+                StackLayout:
+                    height: self.minimum_height
+                    size_hint: 1, .8
+                    Label:
+                        text: "human: hohpooohho"
+                        size_hint: 1, .1
+                    Label:
+                        text: "robot: wefwfewfwefewfwe"
+                        size_hint: 1, .1
+                BoxLayout:
+                    size_hint: 1, .2
+                    TextInput:
+                        size_hint: .5, .2
+                    Button:
+                        text: "submit"
+                        size_hint: .5, .2
+        
+        BoxLayout:
+            size_hint: .2, 1
+            orientation: "vertical"
+            Button: 
+                size_hint: 1, .2
+                text: "Settings"
+            ScrollView:
+                size_hint: 1, .8
+                StackLayout:
+                    orientation: "rl-tb"
+                    height: self.minimum_height
+                    Button:
+                        text: 'server'
+                        size_hint: None, None
+                        height: "100dp"
+                    Button:
+                        text: 'server'
+                        size_hint: None, None
+                        height: "100dp"
+                    Button:
+                        text: 'server'
+                        size_hint: None, None
+                        height: "100dp"
+                    
