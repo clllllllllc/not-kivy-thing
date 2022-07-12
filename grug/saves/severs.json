@@ -1,0 +1,9 @@
+{
+    "severs": [{
+        "server_id": 1,
+        "server_name": "teddy's server",
+        "server_nick": "te",
+        "owner": 1,
+        "members": [1]
+    }]
+}
