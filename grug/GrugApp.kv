@@ -4,7 +4,7 @@
     BoxLayout:
         LoginButton:
             text: "Login"
-            on_press: root.manager.current = 'user'
+            on_press: root.manager.current = 'login'
         
         SignupButton: 
             text: "Signup"
@@ -29,6 +29,13 @@
                     text: root.temp_pass
                 TextInput:
                     text: root.temp_user
+        AnchorLayout: 
+            anchor_x: "right"
+            anchor_y: "bottom"
+            size_hint: .3, .2
+            Button:
+                text: "Sumbint"
+                on_press: root.check_login()
 
 <SignupScreen>:
     AnchorLayout:
