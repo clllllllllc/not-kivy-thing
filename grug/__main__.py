@@ -1,3 +1,4 @@
+from tkinter import Menu
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
@@ -48,7 +49,7 @@ class LoginScreen(Screen):
 
         if login:
             print("ur mom")
-            self.manager.current = "user"
+            self.manager.current = "settings"
 
 
 class SignupScreen(Screen):
@@ -89,31 +90,58 @@ class SignupScreen(Screen):
                     "label_color": "Default",
                     "font_size": "Default",
                     "bg_image": "Default",
-                    "window_size": "Default"
-                }
+                    "window_size": "Default",
+                },
             }
             users_dict["users"].append(new_user)
-            json_object = json.dumps(users_dict, indent = 4)
+            json_object = json.dumps(users_dict, indent=4)
             with open(users_url, "w") as json_file:
                 json_file.write(json_object)
             self.manager.current = "menu"
 
 
 class UserScreen(Screen):
-
     def add_server(self):
-        pass
-    
+        server_name = 0
+        server_owner = 0
+        server_id = 0
+
+        servers_url = r"grug/saves/servers.json"
+        with open(servers_url) as json_file:
+            servers_dict = json.loads(json_file.read())
+            print(servers_dict)
+        # Add code
+        for i in servers_dict["severs"]:
+            if server_name == i["server_name"]:
+                return
+
+        new_server = {
+            "severs": [
+                {
+                    "server_id": server_id,
+                    "server_name": server_name,
+                    "server_nick": "te",
+                    "owner": server_owner,
+                    "members": [server_owner],
+                }
+            ]
+        }
+
     def on_click_server(self):
         pass
+
     def on_click_thing(self):
         pass
-    
+
     def on_click_settings(self):
         pass
 
 
 class SettingsScreen(Screen):
+    pass
+
+
+class UserContent(BoxLayout):
     pass
 
 
@@ -128,8 +156,6 @@ class GrugApp(MDApp, App):
         sm.add_widget(UserScreen(name="user"))
         sm.add_widget(SettingsScreen(name="settings"))
         return sm
-
-    pass
 
 
 if __name__ == "__main__":

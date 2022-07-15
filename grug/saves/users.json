@@ -1,20 +1,42 @@
 {
-    "users": [{
-        "user_id": 1,
-        "username": "teddy001",
-        "password": "6969thing",
-        "email": "holahola@gmail.com",
-        "rank": "admin",
-        "servers": [1],
-        "settings": {
-            "button_font": "Default",
-            "button_color": "Default",
-            "button_bgcolor": "Default",
-            "label_font": "Default",
-            "label_color": "Default",
-            "font_size": "Default",
-            "bg_image": "Default",
-            "window_size": "Default"
+    "users": [
+        {
+            "user_id": 1,
+            "username": "teddy001",
+            "password": "6969thing",
+            "email": "holahola@gmail.com",
+            "rank": "admin",
+            "servers": [
+                1
+            ],
+            "settings": {
+                "button_font": "Default",
+                "button_color": "Default",
+                "button_bgcolor": "Default",
+                "label_font": "Default",
+                "label_color": "Default",
+                "font_size": "Default",
+                "bg_image": "Default",
+                "window_size": "Default"
+            }
+        },
+        {
+            "user_id": 1,
+            "username": "",
+            "password": "",
+            "email": "",
+            "rank": "none",
+            "servers": [],
+            "settings": {
+                "button_font": "Default",
+                "button_color": "Default",
+                "button_bgcolor": "Default",
+                "label_font": "Default",
+                "label_color": "Default",
+                "font_size": "Default",
+                "bg_image": "Default",
+                "window_size": "Default"
+            }
         }
-    }]
+    ]
 }

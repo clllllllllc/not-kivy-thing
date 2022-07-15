@@ -1,6 +1,29 @@
 #:kivy 2.0.0
 
 <MenuScreen>:
+    # BoxLayout:
+    #     orientation: "vertical"
+    #     MDToolbar:
+    #         title: "GrugApp"
+    #         right_action_items: [["dots-vertical", lambda x: app.callback()]]
+       
+
+    #     MDBottomNavigation:
+
+    #         MDBottomNavigationItem:
+    #             name: 'screen 1'
+    #             text: "Login"
+    #             icon: "language-python"
+
+    #             LoginScreen
+                
+    #         MDBottomNavigationItem:
+    #             name: 'screen 2'
+    #             text: "Settings"
+    #             icon: "language-python"
+
+    #             SignupScreen
+                
     BoxLayout:
         LoginButton:
             text: "Login"
@@ -100,90 +123,123 @@
             size_hint: .3, .3
             on_press: root.check_signup()
     
-<UserScreen>
+<UserContent>
     BoxLayout:
+        size_hint: .2, 1
+        orientation: "vertical"
         BoxLayout:
-            size_hint: .2, 1
-            orientation: "vertical"
-            BoxLayout:
-                size_hint: 1, .2
-                Label:
-                    text: "AVATAR"
-                    size_hint: .2, .5
-                Label:
-                    text: "User"
-                    size_hint: .2, .5
+            size_hint: 1, .2
+            Label:
+                text: "AVATAR"
+                size_hint: .2, .5
+            Label:
+                text: "User"
+                size_hint: .2, .5
             
-            ScrollView:
-                StackLayout:
-                    height: self.minimum_height
-                    Button: 
-                        text: "thing"
-                        size_hint: None, None
-                        height: "100dp"
-                    Button: 
-                        text: "thing"
-                        size_hint: None, None
-                        height: "100dp"
-                    Button: 
-                        text: "thing"
-                        size_hint: None, None
-                        height: "100dp"
-                    Button: 
-                        text: "thing"
-                        size_hint: None, None
-                        height: "100dp"
-                    Button: 
-                        text: "thing"
-                        size_hint: None, None
-                        height: "100dp"
-                    Button: 
-                        text: "thing"
-                        size_hint: None, None
-                        height: "100dp"
-        
         ScrollView:
-            size_hint: .6, 1
-            BoxLayout:
-                orientation: "vertical"
-                StackLayout:
-                    height: self.minimum_height
-                    size_hint: 1, .8
-                    Label:
-                        text: "human: hohpooohho"
-                        size_hint: 1, .1
-                    Label:
-                        text: "robot: wefwfewfwefewfwe"
-                        size_hint: 1, .1
-                BoxLayout:
-                    size_hint: 1, .2
-                    TextInput:
-                        size_hint: .5, .2
-                    Button:
-                        text: "submit"
-                        size_hint: .5, .2
+            StackLayout:
+                height: self.minimum_height
+                Button: 
+                    text: "thing"
+                    size_hint: None, None
+                    height: "100dp"
+                Button: 
+                    text: "thing"
+                    size_hint: None, None
+                    height: "100dp"
+                Button: 
+                    text: "thing"
+                    size_hint: None, None
+                    height: "100dp"
+                Button: 
+                    text: "thing"
+                    size_hint: None, None
+                    height: "100dp"
+                Button: 
+                    text: "thing"
+                    size_hint: None, None
+                    height: "100dp"
+                Button: 
+                    text: "thing"
+                    size_hint: None, None
+                    height: "100dp"
         
+    ScrollView:
+        size_hint: .6, 1
         BoxLayout:
-            size_hint: .2, 1
             orientation: "vertical"
-            Button: 
-                size_hint: 1, .2
-                text: "Settings"
-            ScrollView:
+            StackLayout:
+                height: self.minimum_height
                 size_hint: 1, .8
-                StackLayout:
-                    orientation: "rl-tb"
-                    height: self.minimum_height
-                    Button:
-                        text: 'server'
-                        size_hint: None, None
-                        height: "100dp"
-                    Button:
-                        text: 'server'
-                        size_hint: None, None
-                        height: "100dp"
-                    Button:
-                        text: 'server'
-                        size_hint: None, None
-                        height: "100dp"
+                Label:
+                    text: "human: hohpooohho"
+                    size_hint: 1, .1
+                Label:
+                    text: "robot: wefwfewfwefewfwe"
+                    size_hint: 1, .1
+            BoxLayout:
+                size_hint: 1, .2
+                TextInput:
+                    size_hint: .5, .2
+                Button:
+                    text: "submit"
+                    size_hint: .5, .2
+        
+    BoxLayout:
+        size_hint: .2, 1
+        orientation: "vertical"
+        Button: 
+            size_hint: 1, .2
+            text: "Settings"
+        ScrollView:
+            size_hint: 1, .8
+            StackLayout:
+                orientation: "rl-tb"
+                height: self.minimum_height
+                Button:
+                    text: 'server'
+                    size_hint: None, None
+                    height: "100dp"
+                Button:
+                    text: 'server'
+                    size_hint: None, None
+                    height: "100dp"
+                Button:
+                    text: 'server'
+                    size_hint: None, None
+                    height: "100dp"
+
+<SettingsScreen>
+    BoxLayout:
+        orientation: "vertical"
+        MDToolbar:
+       
+
+        MDBottomNavigation:
+
+            MDBottomNavigationItem:
+                name: 'screen 1'
+                text: "User"
+                icon: "language-python"
+
+                UserContent
+                
+            MDBottomNavigationItem:
+                name: 'screen 2'
+                text: "Settings"
+                icon: "language-python"
+
+                MDLabel:
+                    text: "Settings"
+                    halign: "center"
+                
+            MDBottomNavigationItem:
+                name: 'screen 3'
+                text: "Add Server"
+                icon: "language-python"
+
+                MDLabel:
+                    text: "Add Server"
+                    halign: "center"
+            
                     
